@@ -3,463 +3,2131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lopes Studio de Beleza | Garibaldi - RS</title>
-  <meta name="description" content="Salão de beleza em Garibaldi RS. Atendimento feminino, masculino e infantil. Agende seu horário pelo WhatsApp." />
+  <title>Studio Lopes Barreto | Salão de Beleza e Estética em Garibaldi - RS</title>
+  <meta
+    name="description"
+    content="Studio Lopes Barreto em Garibaldi/RS. Mechas, coloração, botox capilar, estética, sobrancelhas, cílios, manicure e maquiagem. Atendimento personalizado com Marciele Lopes. Agende pelo WhatsApp."
+  />
+
+  <!-- ===== OPEN GRAPH (prévia bonita ao compartilhar no WhatsApp) ===== -->
+  <!-- TROQUE a URL abaixo pelo endereço final do site quando publicar -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Studio Lopes Barreto | Salão de Beleza e Estética em Garibaldi - RS" />
+  <meta property="og:description" content="Tratamentos exclusivos de beleza e estética em Garibaldi. Agende seu horário pelo WhatsApp." />
+  <meta property="og:url" content="https://SEUUSUARIO.github.io/lopes-studio/" />
+  <meta property="og:image" content="https://SEUUSUARIO.github.io/lopes-studio/hero.jpeg" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- ===== FAVICON (crie um favicon.png e coloque na pasta) ===== -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- ===== FONTES (Cormorant para títulos, Montserrat para textos) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===== SCHEMA / DADOS ESTRUTURADOS (SEO LOCAL) ===== -->
+  <!-- Confirme endereço completo (número!) e horários com a Marciele -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Studio Lopes Barreto",
+    "image": "https://SEUUSUARIO.github.io/lopes-studio/hero.jpeg",
+    "url": "https://SEUUSUARIO.github.io/lopes-studio/",
+    "telephone": "+5554999553605",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Buarque de Macedo - São Francisco",
+      "addressLocality": "Garibaldi",
+      "addressRegion": "RS",
+      "postalCode": "95720-000",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "14:00"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Os procedimentos doem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A maioria dos nossos tratamentos é indolor ou com desconforto mínimo. Utilizamos técnicas avançadas e produtos de qualidade para garantir seu conforto. Para procedimentos mais sensíveis, aplicamos anestésico tópico quando necessário."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso parcelar os tratamentos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Oferecemos condições especiais de parcelamento em até 3x no cartão sem juros. Para pacotes maiores, consulte-nos sobre condições exclusivas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o agendamento de retorno?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Após cada procedimento, orientamos sobre o período ideal para manutenção. Você pode agendar seu retorno pelo WhatsApp, telefone ou pessoalmente. Enviamos lembretes para que você não perca sua data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais cuidados devo ter pós-sessão?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fornecemos um guia personalizado para cada tratamento. Geralmente inclui evitar sol, produtos específicos e cuidados básicos. Acompanhamos você pelo WhatsApp para qualquer dúvida."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
+    :root {
+      --cream-50: #faf7f1;
+      --cream-100: #f5f0e6;
+      --nude-50: #f6f1e9;
+      --nude-100: #ece2d3;
+      --nude-200: #dccdb8;
+      --nude-300: #c4ae93;
+      --nude-400: #a8917a;
+      --nude-500: #94806a;
+      --nude-600: #7a6753;
+      --nude-700: #5f4f40;
+      --nude-800: #4a3d32;
+      --nude-900: #352b23;
+      --gold-50: #fbf6ea;
+      --gold-100: #f4e8cd;
+      --gold-200: #ead29b;
+      --gold-300: #e0c078;
+      --gold-400: #ddb45e;
+      --gold-500: #d4a84a;
+      --gold-600: #b8903a;
+      --gold-700: #96742e;
+      --rose-50: #fdf2f5;
+      --rose-100: #fbe3ea;
+      --rose-300: #f0a4b8;
+      --rose-400: #e86f8c;
+      --rose-900: #6b2437;
+      --green-500: #22a55b;
+      --green-600: #1b8a4c;
+      --shadow-lg: 0 14px 34px rgba(74, 61, 50, 0.10);
+      --shadow-soft: 0 8px 20px rgba(74, 61, 50, 0.08);
+      --max: 1180px;
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
-    :root {
-      --gold: #d4af37;
-      --black: #151515;
-      --dark: #222;
-      --light: #f8f8f8;
-      --white: #fff;
-      --gray: #666;
-      --green: #25d366;
-    }
-
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--gray);
-      background: var(--white);
+      font-family: "Montserrat", Arial, sans-serif;
+      background: var(--cream-50);
+      color: var(--nude-800);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(21, 21, 21, 0.95);
-      z-index: 999;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+      border: 0;
+      background: none;
     }
 
     .container {
-      width: min(1100px, 92%);
+      width: min(var(--max), 92%);
       margin: 0 auto;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 0;
-      gap: 16px;
+    h1, h2, h3, .font-display {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      line-height: 1.15;
     }
 
-    .logo {
-      color: var(--gold);
-      font-size: 1.4rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .menu {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .menu a {
-      color: var(--white);
-      text-decoration: none;
+    .eyebrow {
+      display: block;
+      color: var(--gold-600);
+      font-size: 0.8rem;
       font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
-    .menu a:hover {
-      color: var(--gold);
+    .section-title {
+      text-align: center;
+      margin-bottom: 52px;
     }
 
-    .btn-whats {
-      background: var(--green);
-      color: var(--white);
-      padding: 10px 18px;
-      border-radius: 999px;
-      text-decoration: none;
+    .section-title h2 {
+      font-size: clamp(2.1rem, 4vw, 3rem);
       font-weight: 700;
-      display: inline-block;
-      transition: 0.3s;
+      color: var(--nude-800);
+      margin-bottom: 12px;
     }
 
-    .btn-whats:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
+    .section-title p {
+      max-width: 640px;
+      margin: 0 auto;
+      color: var(--nude-600);
     }
 
+    /* ===== Botões ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 32px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gold {
+      background: linear-gradient(90deg, var(--gold-500), var(--gold-600));
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(212, 168, 74, 0.25);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(212, 168, 74, 0.35);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--nude-300);
+      color: var(--nude-700);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold-400);
+      color: var(--gold-600);
+      background: rgba(212, 168, 74, 0.06);
+    }
+
+    /* ===== Animações de entrada (scroll reveal) ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      * { animation: none !important; }
+    }
+
+
+
+    /* ===== Cabeçalho com foto da fachada ===== */
+    .facade-cover {
+      position: relative;
+      width: 100%;
+      min-height: 340px;
+      background: var(--nude-900);
+      overflow: hidden;
+    }
+
+    .facade-cover img {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.88);
+      transform: scale(1.01);
+    }
+
+    .facade-cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(53,43,35,0.18), rgba(53,43,35,0.28));
+      pointer-events: none;
+    }
+
+    /* ===== Header ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+
+    header.scrolled {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 18px rgba(74, 61, 50, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--nude-800);
+    }
+
+    .brand svg {
+      width: 30px;
+      height: 30px;
+      color: var(--gold-500);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--nude-600);
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-600);
+    }
+
+    .nav-cta {
+      padding: 11px 24px;
+      font-size: 0.88rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      color: var(--nude-800);
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 14px 26px rgba(74, 61, 50, 0.12);
+      padding: 12px 4% 20px;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mobile-menu a {
+      padding: 13px 16px;
+      border-radius: 10px;
+      color: var(--nude-700);
+      font-weight: 500;
+    }
+
+    .mobile-menu a:hover {
+      background: var(--nude-50);
+    }
+
+    .mobile-menu .btn {
+      margin-top: 8px;
+    }
+
+    /* ===== Hero ===== */
     .hero {
+      position: relative;
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background:
-        linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)),
-        linear-gradient(135deg, #1b1b1b, #3a3a3a);
-      color: var(--white);
-      text-align: center;
-      padding: 120px 0 60px;
+      padding: 120px 0 80px;
+      background: linear-gradient(135deg, var(--nude-50), var(--cream-100), var(--rose-50));
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.3;
+      background: linear-gradient(135deg, transparent 0%, rgba(212,168,74,0.12) 25%, rgba(232,111,140,0.06) 50%, rgba(189,165,136,0.12) 75%, transparent 100%);
+      background-size: 200% 200%;
+      animation: shimmer 8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--nude-200);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 0.85rem;
+      color: var(--nude-600);
+      margin-bottom: 24px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gold-500);
     }
 
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 4rem);
-      margin-bottom: 16px;
-      color: var(--white);
+      font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+      font-weight: 700;
+      color: var(--nude-800);
+      margin-bottom: 22px;
     }
 
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 28px;
-      font-size: 1.1rem;
+    .hero h1 .grad {
+      background: linear-gradient(90deg, var(--gold-500), var(--rose-400), var(--gold-600));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy > p {
+      font-size: 1.05rem;
+      color: var(--nude-600);
+      max-width: 540px;
+      margin-bottom: 34px;
     }
 
     .hero-actions {
       display: flex;
-      justify-content: center;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
+      margin-bottom: 38px;
     }
 
-    .btn-main {
-      background: var(--gold);
-      color: var(--black);
-      padding: 14px 26px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s;
+    .hero-checks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
     }
 
-    .btn-main:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
-    }
-
-    .btn-secondary {
-      border: 2px solid var(--white);
-      color: var(--white);
-      padding: 12px 24px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.1);
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    h2 {
-      text-align: center;
-      color: var(--black);
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      margin-bottom: 36px;
-      color: var(--gray);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
-    }
-
-    .card .icon {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    .card h3 {
-      color: var(--black);
-      margin-bottom: 10px;
-    }
-
-    .about-box {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
+    .hero-checks span {
+      display: inline-flex;
       align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--nude-600);
     }
 
-    .about-text {
-      font-size: 1.05rem;
+    .hero-checks svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gold-500);
+      flex-shrink: 0;
     }
 
-    .about-visual {
-      min-height: 320px;
-      border-radius: 20px;
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-photo {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      border-radius: 26px;
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-      background: #eee;
+      box-shadow: 0 26px 50px rgba(74, 61, 50, 0.22);
     }
 
-    .about-visual img {
+    .hero-photo img {
       width: 100%;
       height: 100%;
-      min-height: 320px;
       object-fit: cover;
-      display: block;
     }
 
-    .contact-grid {
+    .hero-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(53,43,35,0.6), rgba(53,43,35,0.15) 45%, transparent);
+    }
+
+    .hero-photo-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 42px;
+      text-align: center;
+      z-index: 2;
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+    }
+
+    .hero-photo-caption p:first-child {
+      font-size: 1.35rem;
+      opacity: 0.9;
+    }
+
+    .hero-photo-caption p:last-child {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      position: absolute;
+      bottom: -22px;
+      left: -22px;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--nude-100);
+      border-radius: 18px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-card .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-100), var(--rose-100));
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      place-items: center;
+      color: var(--gold-600);
     }
 
-    .contact-box {
-      background: var(--light);
-      border-radius: 16px;
+    .hero-card .icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .hero-card strong {
+      display: block;
+      font-size: 0.98rem;
+      color: var(--nude-800);
+    }
+
+    .hero-card small {
+      color: var(--nude-500);
+      font-size: 0.75rem;
+    }
+
+
+
+    /* ===== Carrossel estilo Instagram ===== */
+    .instagram-strip {
+      padding: 78px 0;
+      background:
+        radial-gradient(circle at top left, rgba(212,168,74,0.10), transparent 30%),
+        linear-gradient(180deg, #fff, var(--cream-50));
+      border-top: 1px solid var(--nude-100);
+      border-bottom: 1px solid var(--nude-100);
+      overflow: hidden;
+    }
+
+    .instagram-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .instagram-head .section-title {
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .instagram-head .section-title p {
+      margin: 0;
+    }
+
+    .instagram-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .insta-control {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--nude-200);
+      color: var(--nude-700);
+      box-shadow: var(--shadow-soft);
+      transition: all 0.25s ease;
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+
+    .insta-control:hover {
+      transform: translateY(-2px);
+      color: var(--gold-600);
+      border-color: var(--gold-300);
+    }
+
+    .insta-track-wrap {
+      position: relative;
+    }
+
+    .insta-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc(25% - 12px);
+      gap: 16px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      padding: 6px 2px 14px;
+      cursor: grab;
+    }
+
+    .insta-track:active {
+      cursor: grabbing;
+    }
+
+    .insta-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .insta-card {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--nude-50), var(--rose-50));
+      border: 1px solid var(--nude-100);
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      isolation: isolate;
+    }
+
+    .insta-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .insta-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .insta-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(53,43,35,0.65), transparent 58%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+
+    .insta-card:hover::before {
+      opacity: 1;
+    }
+
+    .insta-card .insta-label {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      color: #fff;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.3s ease;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .insta-card:hover .insta-label {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .insta-placeholder {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      text-align: center;
+      color: var(--nude-600);
+      background: linear-gradient(135deg, var(--nude-50), var(--rose-50), var(--gold-50));
+      font-size: 0.9rem;
+    }
+
+    .instagram-footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 22px;
+    }
+
+    .btn-instagram {
+      background: linear-gradient(135deg, #8d5f7d, #bc7a6d, #d7a04a);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(188, 122, 109, 0.22);
+    }
+
+    .btn-instagram:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(188, 122, 109, 0.30);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(53,43,35,0.86);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
     }
 
-    .contact-box h3 {
-      color: var(--black);
+    .lightbox.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox-box {
+      position: relative;
+      width: min(960px, 100%);
+      max-height: 86vh;
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--cream-50);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    }
+
+    .lightbox-box img {
+      width: 100%;
+      max-height: 86vh;
+      object-fit: contain;
+      background: var(--cream-100);
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.88);
+      color: var(--nude-800);
+      box-shadow: var(--shadow-soft);
+      transition: all 0.25s ease;
+      z-index: 2;
+    }
+
+    .lightbox-close:hover,
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      background: #fff;
+      color: var(--gold-600);
+    }
+
+    .lightbox-close {
+      top: 14px;
+      right: 14px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.35rem;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .lightbox-prev { left: 14px; }
+    .lightbox-next { right: 14px; }
+
+    /* ===== Stats ===== */
+    .stats {
+      padding: 64px 0;
+      background: rgba(255,255,255,0.55);
+      border-top: 1px solid var(--nude-100);
+      border-bottom: 1px solid var(--nude-100);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+
+    .stat svg {
+      width: 30px;
+      height: 30px;
+      color: var(--gold-500);
+      margin: 0 auto 12px;
+    }
+
+    .stat .num {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.6rem, 4vw, 3.4rem);
+      font-weight: 700;
+      color: var(--gold-600);
+      line-height: 1;
+    }
+
+    .stat p {
+      color: var(--nude-500);
+      font-size: 0.88rem;
+      margin-top: 6px;
+    }
+
+    /* ===== Seções ===== */
+    section.pad {
+      padding: 96px 0;
+    }
+
+    .bg-gradient-soft {
+      background: linear-gradient(180deg, var(--cream-50), var(--nude-50));
+    }
+
+    .bg-white {
+      background: #fff;
+    }
+
+    /* ===== Serviços ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      position: relative;
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(4px);
+      border: 1px solid var(--nude-100);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(212, 168, 74, 0.16);
+    }
+
+    .service-card .icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--nude-100), var(--rose-100));
+      display: grid;
+      place-items: center;
+      color: var(--gold-600);
+      margin-bottom: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover .icon {
+      transform: scale(1.1);
+    }
+
+    .service-card .icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      font-size: 0.87rem;
+      color: var(--nude-500);
+    }
+
+    .center-action {
+      text-align: center;
+      margin-top: 46px;
+    }
+
+    /* ===== Depoimentos ===== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.85);
+      border: 1px solid var(--nude-100);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .stars {
+      color: var(--gold-400);
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-card > p {
+      font-size: 0.9rem;
+      color: var(--nude-600);
+      font-style: italic;
       margin-bottom: 16px;
     }
 
-    .contact-box p {
-      margin-bottom: 10px;
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    .map-link {
-      display: inline-block;
-      margin-top: 12px;
-      text-decoration: none;
-      color: var(--black);
-      background: var(--gold);
-      padding: 12px 18px;
-      border-radius: 999px;
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-200), var(--rose-100));
+      display: grid;
+      place-items: center;
+      color: var(--nude-800);
       font-weight: 700;
-      transition: 0.3s;
+      font-size: 0.92rem;
+      flex-shrink: 0;
     }
 
-    .map-link:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
+    .testimonial-author strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--nude-800);
     }
 
-    footer {
-      background: var(--black);
-      color: var(--white);
+    .testimonial-author small {
+      color: var(--nude-400);
+      font-size: 0.76rem;
+    }
+
+    /* ===== Sobre ===== */
+    .about-box {
+      margin-top: 64px;
+      background: linear-gradient(135deg, var(--nude-50), var(--rose-50));
+      border: 1px solid var(--nude-100);
+      border-radius: 28px;
+      padding: clamp(28px, 5vw, 52px);
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .about-box h2 {
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .about-box p {
+      color: var(--nude-600);
+      margin-bottom: 16px;
+    }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .about-tags span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 0.84rem;
+      color: var(--nude-700);
+    }
+
+    .about-tags svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gold-500);
+    }
+
+    .about-photo {
+      position: relative;
+    }
+
+    .about-photo .frame {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-photo .frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(53,43,35,0.68), rgba(53,43,35,0.15) 45%, transparent);
+    }
+
+    .about-photo-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 30px;
       text-align: center;
-      padding: 24px 0;
+      z-index: 2;
+      color: #fff;
     }
 
-    @media (max-width: 820px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    .about-photo-caption strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
 
-      .menu {
-        gap: 12px;
-      }
+    .about-photo-caption span {
+      color: var(--gold-300);
+      font-size: 0.9rem;
+    }
 
-      .about-box,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
+    .rating-chip {
+      position: absolute;
+      bottom: -14px;
+      right: -14px;
+      background: #fff;
+      border: 1px solid var(--nude-100);
+      border-radius: 14px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.88rem;
+      z-index: 3;
+    }
 
-      .hero {
-        padding-top: 150px;
-      }
+    .rating-chip .star {
+      color: var(--gold-400);
+    }
+
+    /* ===== Diferenciais ===== */
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .diff-card {
+      text-align: center;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid var(--nude-100);
+      border-radius: 20px;
+      padding: 38px 30px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .diff-card .icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--gold-100), var(--rose-100));
+      display: grid;
+      place-items: center;
+      color: var(--gold-600);
+      margin: 0 auto 22px;
+    }
+
+    .diff-card .icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .diff-card h3 {
+      font-size: 1.55rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .diff-card p {
+      color: var(--nude-600);
+      font-size: 0.92rem;
+    }
+
+    /* ===== Galeria ===== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+    }
+
+    .gallery-item.big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 200px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item .label {
+      position: absolute;
+      left: 16px;
+      bottom: 14px;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(53,43,35,0.7), transparent 55%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover::after,
+    .gallery-item:hover .label {
+      opacity: 1;
+    }
+
+    /* ===== Contato ===== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: stretch;
+    }
+
+    .contact-info {
+      background: linear-gradient(135deg, var(--nude-50), var(--rose-50));
+      border: 1px solid var(--nude-100);
+      border-radius: 26px;
+      padding: clamp(26px, 4vw, 40px);
+    }
+
+    .contact-info h3 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 26px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .contact-item .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 13px;
+      background: var(--gold-100);
+      display: grid;
+      place-items: center;
+      color: var(--gold-600);
+      flex-shrink: 0;
+    }
+
+    .contact-item .icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.95rem;
+    }
+
+    .contact-item p {
+      color: var(--nude-600);
+      font-size: 0.9rem;
+    }
+
+    .contact-info .btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .contact-photo {
+      position: relative;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      min-height: 380px;
+    }
+
+    .contact-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contact-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(53,43,35,0.55), transparent 55%);
+    }
+
+    .maps-btn {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.22);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: background 0.25s ease;
+    }
+
+    .maps-btn:hover {
+      background: rgba(255,255,255,0.34);
+    }
+
+    .maps-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: rgba(255,255,255,0.85);
+      border: 1px solid var(--nude-200);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 20px 24px;
+      text-align: left;
+      font-weight: 600;
+      color: var(--nude-800);
+      transition: background 0.25s ease;
+    }
+
+    .faq-question:hover {
+      background: var(--nude-50);
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      color: var(--gold-500);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 24px 20px;
+      color: var(--nude-600);
+      font-size: 0.93rem;
+    }
+
+    /* ===== CTA Final ===== */
+    .final-cta {
+      position: relative;
+      padding: 96px 0;
+      background: linear-gradient(135deg, var(--nude-800), var(--nude-700), var(--rose-900));
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+      background:
+        radial-gradient(circle at 30% 50%, rgba(212,168,74,0.4) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(232,111,140,0.3) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .final-cta .inner {
+      position: relative;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 4%;
+    }
+
+    .final-cta svg.crown {
+      width: 56px;
+      height: 56px;
+      color: var(--gold-400);
+      margin: 0 auto 24px;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(2.1rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .final-cta p {
+      color: var(--nude-200);
+      font-size: 1.05rem;
+      margin-bottom: 38px;
+    }
+
+    .final-cta .actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-light {
+      background: linear-gradient(90deg, var(--gold-400), var(--gold-500));
+      color: var(--nude-900);
+      box-shadow: 0 10px 26px rgba(212, 168, 74, 0.3);
+    }
+
+    .btn-cta-light:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-cta-ghost {
+      border: 2px solid rgba(255,255,255,0.3);
+      color: #fff;
+    }
+
+    .btn-cta-ghost:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: var(--nude-900);
+      color: var(--nude-200);
+      padding: 64px 0 36px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 40px;
+      margin-bottom: 42px;
+    }
+
+    footer .brand {
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    footer p, footer a {
+      font-size: 0.88rem;
+      color: var(--nude-400);
+    }
+
+    footer h4 {
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-400);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-bottom p {
+      font-size: 0.76rem;
+      color: var(--nude-500);
+    }
+
+    /* ===== Botões flutuantes ===== */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 90;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, var(--green-500), var(--green-600));
+      color: #fff;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      box-shadow: 0 14px 30px rgba(34, 165, 91, 0.35);
+      transition: transform 0.3s ease;
+      animation: pulseSoft 2s ease-in-out infinite;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-4px);
+    }
+
+    .floating-whatsapp svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulseSoft {
+      0%, 100% { box-shadow: 0 14px 30px rgba(34, 165, 91, 0.35); }
+      50% { box-shadow: 0 14px 34px rgba(34, 165, 91, 0.55); }
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 90;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--nude-700);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow-soft);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--nude-800);
+    }
+
+    .back-to-top svg {
+      width: 20px;
+      height: 20px;
+    }
+
+
+
+    @media (max-width: 1024px) {
+      .insta-track { grid-auto-columns: calc(33.333% - 11px); }
+    }
+
+    @media (max-width: 860px) {
+      .instagram-head { align-items: flex-start; flex-direction: column; }
+      .instagram-head .section-title { text-align: center; width: 100%; }
+      .instagram-head .section-title p { margin: 0 auto; }
+      .instagram-actions { width: 100%; justify-content: center; }
+      .insta-track { grid-auto-columns: calc(50% - 8px); }
+    }
+
+    @media (max-width: 560px) {
+      .insta-track { grid-auto-columns: 82%; }
+      .instagram-strip { padding: 58px 0; }
+      .lightbox-prev, .lightbox-next { width: 40px; height: 40px; }
+    }
+
+    /* ===== Responsivo ===== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { max-width: 460px; margin: 0 auto; }
+    }
+
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: grid; place-items: center; }
+      .services-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .diff-grid, .about-box, .contact-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+
+
+      .facade-cover,
+      .facade-cover img { min-height: 260px; }
+      .hero { padding-top: 100px; }
+      .hero-card { left: 8px; bottom: -16px; }
+    }
+
+    @media (max-width: 560px) {
+      .services-grid, .testimonials-grid, .stats-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.big { grid-column: span 1; grid-row: span 1; }
+      .hero-actions .btn, .final-cta .actions .btn { width: 100%; }
+      .floating-whatsapp span { display: none; }
+      .floating-whatsapp { padding: 15px; }
+
+      .facade-cover,
+      .facade-cover img { min-height: 220px; }
+      section.pad { padding: 68px 0; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#inicio" class="logo">Lopes Studio de Beleza</a>
 
-        <ul class="menu">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
 
-        <a class="btn-whats" target="_blank" href="https://wa.me/5554999553605?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20no%20Lopes%20Studio%20de%20Beleza">
-          Agendar no WhatsApp
-        </a>
-      </nav>
+  <!-- ===== CABEÇALHO COM FOTO DA FACHADA =====
+       Troque a imagem fachada.jpeg pela foto real da fachada do salão.
+       Mantenha o nome exatamente como fachada.jpeg para funcionar no GitHub. -->
+  <section class="facade-cover" aria-label="Fachada do Studio Lopes Barreto">
+    <img src="fachada.jpeg" alt="Fachada do Studio Lopes Barreto em Garibaldi" />
+  </section>
+
+  <!-- ============================================================
+       LINKS DO WHATSAPP: todos já usam a mensagem pré-preenchida
+       "Olá! Vi seu site no Google e gostaria de agendar um horário
+       no Studio Lopes Barreto." — para trocar o número, use Ctrl+H
+       e substitua 5554999553605 em todo o arquivo.
+       ============================================================ -->
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8l4 4 6-8 6 8 4-4v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8z"/></svg>
+        Studio Lopes Barreto
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li>
+          <a class="btn btn-gold nav-cta" href="https://wa.me/5554999553605?text=Ol%C3%A1!%20Vi%20seu%20site%20no%20Google%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Lopes%20Barreto." target="_blank" rel="noopener noreferrer">Quero Agendar</a>
+        </li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
     </div>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn-gold" href="https://wa.me/5554999553605?text=Ol%C3%A1!%20Vi%20seu%20site%20no%20Google%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Lopes%20Barreto." target="_blank" rel="noopener noreferrer">Quero Agendar</a>
+    </nav>
   </header>
 
+  <!-- ===== HERO ===== -->
   <section class="hero" id="inicio">
-    <div class="container">
-      <h1>Realce sua beleza com atendimento profissional</h1>
-      <p>
-        Atendimento feminino, masculino e infantil em Garibaldi - RS,
-        com cuidado, estilo e praticidade para toda a família.
-      </p>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-5.4 3.2L16 19l-4-3-4 3 1.4-5.8L4 10l6.1-1.2L12 3z"/></svg>
+          Atendimento Premium em Garibaldi
+        </span>
 
-      <div class="hero-actions">
-        <a class="btn-main" target="_blank" href="https://wa.me/5554999553605?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20no%20Lopes%20Studio%20de%20Beleza">
-          Agendar agora
-        </a>
-        <a class="btn-secondary" href="#servicos">Ver serviços</a>
+        <h1>Descubra a <span class="grad">sua melhor versão</span></h1>
+
+        <p>
+          No Studio Lopes Barreto, cada detalhe é pensado para realçar sua beleza natural.
+          Tratamentos exclusivos, atendimento personalizado e resultados que transformam.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="https://wa.me/5554999553605?text=Ol%C3%A1!%20Vi%20seu%20site%20no%20Google%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Lopes%20Barreto." target="_blank" rel="noopener noreferrer">Garantir Minha Vaga</a>
+          <a class="btn btn-outline" href="#servicos">Ver Tratamentos</a>
+        </div>
+
+        <div class="hero-checks">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+            Atendimento Personalizado
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/></svg>
+            Produtos Premium
+          </span>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <section id="servicos">
-    <div class="container">
-      <h2>Nossos Serviços</h2>
-      <p class="section-subtitle">Beleza, cuidado e praticidade em um só lugar.</p>
-
-      <div class="cards">
-        <div class="card">
-          <div class="icon">✂️</div>
-          <h3>Corte Feminino</h3>
-          <p>Cortes modernos e personalizados para valorizar seu estilo.</p>
+      <div class="hero-visual reveal">
+        <div class="hero-photo">
+          <!-- TROQUE por uma foto real do estúdio (ex.: hero.jpeg) -->
+          <img src="hero.jpeg" alt="Ambiente do Studio Lopes Barreto, salão de beleza em Garibaldi" />
+          <div class="hero-photo-caption">
+            <p>Sua beleza merece</p>
+            <p>Cuidado Exclusivo</p>
+          </div>
         </div>
-
-        <div class="card">
-          <div class="icon">✂️</div>
-          <h3>Corte Masculino</h3>
-          <p>Visual prático, moderno e alinhado para o dia a dia.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">👦</div>
-          <h3>Corte Infantil</h3>
-          <p>Atendimento cuidadoso e confortável para as crianças.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🪮</div>
-          <h3>Escova</h3>
-          <p>Finalização impecável para rotina ou ocasiões especiais.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">💆‍♀️</div>
-          <h3>Tratamentos Capilares</h3>
-          <p>Hidratação, recuperação e cuidados para cabelos saudáveis.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🎨</div>
-          <h3>Coloração</h3>
-          <p>Resultados personalizados com atenção aos detalhes.</p>
+        <div class="hero-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg>
+          </div>
+          <div>
+            <strong>+10 Anos</strong>
+            <small>de Experiência</small>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="sobre">
-    <div class="container">
-      <h2>Sobre o Lopes Studio</h2>
-      <p class="section-subtitle">Um espaço pensado para cuidar da sua autoestima.</p>
 
-      <div class="about-box">
-        <div class="about-text">
+
+  <!-- ===== CARROSSEL ESTILO INSTAGRAM =====
+       Suba as imagens na mesma pasta do index.html com estes nomes:
+       insta-01.jpeg, insta-02.jpeg, insta-03.jpeg, insta-04.jpeg, insta-05.jpeg, insta-06.jpeg.
+       Para trocar o Instagram, substitua o link abaixo pelo perfil real da Marciele. -->
+  <section class="instagram-strip" id="instagram">
+    <div class="container">
+      <div class="instagram-head">
+        <div class="section-title">
+          <span class="eyebrow">Instagram</span>
+          <h2>Inspirações e resultados do Studio</h2>
+          <p>Acompanhe transformações, cuidados, bastidores e novidades do Studio Lopes Barreto.</p>
+        </div>
+
+        <div class="instagram-actions" aria-label="Controles do carrossel">
+          <button class="insta-control" id="instaPrev" type="button" aria-label="Foto anterior">‹</button>
+          <button class="insta-control" id="instaNext" type="button" aria-label="Próxima foto">›</button>
+        </div>
+      </div>
+
+      <div class="insta-track-wrap reveal">
+        <div class="insta-track" id="instaTrack">
+          <article class="insta-card"><img src="insta-01.jpeg" alt="Resultado publicado no Instagram do Studio Lopes Barreto" loading="lazy" onerror="this.outerHTML='<div class=&quot;insta-placeholder&quot;>Adicione a imagem<br><strong>insta-01.jpeg</strong></div>'"><span class="insta-label">Resultado do Studio</span></article>
+          <article class="insta-card"><img src="insta-02.jpeg" alt="Cuidados de beleza no Studio Lopes Barreto" loading="lazy" onerror="this.outerHTML='<div class=&quot;insta-placeholder&quot;>Adicione a imagem<br><strong>insta-02.jpeg</strong></div>'"><span class="insta-label">Cuidados de beleza</span></article>
+          <article class="insta-card"><img src="insta-03.jpeg" alt="Transformação realizada no Studio Lopes Barreto" loading="lazy" onerror="this.outerHTML='<div class=&quot;insta-placeholder&quot;>Adicione a imagem<br><strong>insta-03.jpeg</strong></div>'"><span class="insta-label">Transformação</span></article>
+          <article class="insta-card"><img src="insta-04.jpeg" alt="Trabalho de estética e beleza do Studio Lopes Barreto" loading="lazy" onerror="this.outerHTML='<div class=&quot;insta-placeholder&quot;>Adicione a imagem<br><strong>insta-04.jpeg</strong></div>'"><span class="insta-label">Estética e beleza</span></article>
+          <article class="insta-card"><img src="insta-05.jpeg" alt="Atendimento do Studio Lopes Barreto" loading="lazy" onerror="this.outerHTML='<div class=&quot;insta-placeholder&quot;>Adicione a imagem<br><strong>insta-05.jpeg</strong></div>'"><span class="insta-label">Atendimento premium</span></article>
+          <article class="insta-card"><img src="insta-06.jpeg" alt="Novidades do Studio Lopes Barreto no Instagram" loading="lazy" onerror="this.outerHTML='<div class=&quot;insta-placeholder&quot;>Adicione a imagem<br><strong>insta-06.jpeg</strong></div>'"><span class="insta-label">Novidades do Studio</span></article>
+        </div>
+      </div>
+
+      <div class="instagram-footer">
+        <a class="btn btn-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Ver mais no Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS =====
+       IMPORTANTE: confirme estes números com a Marciele antes de publicar -->
+  <div class="stats">
+    <div class="container stats-grid">
+      <div class="stat reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/><path d="M16 4a4 4 0 0 1 0 8"/><path d="M19 15c2 .8 3 2.5 3 6"/></svg>
+        <div class="num" data-count="2500" data-suffix="+">0</div>
+        <p>Clientes Atendidos</p>
+      </div>
+      <div class="stat reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg>
+        <div class="num" data-count="10" data-suffix="+">0</div>
+        <p>Anos de Experiência</p>
+      </div>
+      <div class="stat reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.5 6.3.9-4.5 4.4 1 6.2-5.5-2.9L6.5 20l1-6.2L3 9.4l6.3-.9L12 3z"/></svg>
+        <div class="num" data-count="98" data-suffix="%">0</div>
+        <p>Clientes Satisfeitos</p>
+      </div>
+      <div class="stat reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5-4-9-7.5-9-11.5C3 6.5 5 4.5 7.5 4.5c1.7 0 3.3.9 4.5 2.5 1.2-1.6 2.8-2.5 4.5-2.5C19 4.5 21 6.5 21 9.5c0 4-4 7.5-9 11.5z"/></svg>
+        <div class="num" data-count="15" data-suffix="+">0</div>
+        <p>Tratamentos</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="pad bg-gradient-soft" id="servicos">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">Nossos Tratamentos</span>
+        <h2>Serviços Exclusivos</h2>
+        <p>Cada tratamento é uma experiência única, pensada especialmente para realçar sua beleza natural.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-5.4 3.2L16 19l-4-3-4 3 1.4-5.8L4 10l6.1-1.2L12 3z"/></svg></div>
+          <h3>Mechas &amp; Coloração</h3>
+          <p>Técnicas exclusivas para realçar sua beleza natural com reflexos luminosos e personalizados.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-3 4.5-6 7.7-6 11a6 6 0 0 0 12 0c0-3.3-3-6.5-6-11z"/></svg></div>
+          <h3>Hidratação Profunda</h3>
+          <p>Tratamentos intensivos que devolvem vida, brilho e maciez aos seus fios.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8l4 4 6-8 6 8 4-4v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8z"/></svg></div>
+          <h3>Botox Capilar</h3>
+          <p>Reconstrução completa que elimina frizz e proporciona fios lisos e radiantes.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 8.5L20 20M8.5 15.5L20 4"/></svg></div>
+          <h3>Escova &amp; Cachos</h3>
+          <p>Modelagem perfeita para valorizar seu estilo, seja liso ou cachos definidos.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9l4-6z"/><path d="M2 9h20M12 21L8 9l2-6M12 21l4-12-2-6"/></svg></div>
+          <h3>Corte Adulto &amp; Infantil</h3>
+          <p>Técnicas modernas e atendimento especializado para todas as idades.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><circle cx="8.5" cy="7.5" r="1"/><circle cx="6.5" cy="12.5" r="1"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.8-.7 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8H17c2.8 0 5-2.2 5-5C22 6 17.5 2 12 2z"/></svg></div>
+          <h3>Progressiva</h3>
+          <p>Alinhamento perfeito com ou sem formol, resultados duradouros e naturais.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+          <h3>Harmonização de Glúteos</h3>
+          <p>Procedimento estético para contorno e volume com resultados naturais e harmoniosos.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8V6a2 2 0 0 0-2-2H8"/><path d="M12 12v5M9.5 14.5h5"/></svg></div>
+          <h3>Lipo sem Corte</h3>
+          <p>Tecnologia avançada para redução de medidas sem necessidade de cirurgia.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Design de Sobrancelha</h3>
+          <p>Modelagem profissional que valoriza sua expressão e harmoniza seu rosto.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6"/><path d="M12 6v-2M7 7L5.5 5M17 7l1.5-2"/><circle cx="12" cy="13" r="3"/></svg></div>
+          <h3>Extensão de Cílios</h3>
+          <p>Olhar impactante com extensões naturais ou volume glamouroso.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a2 2 0 0 1 4 0v4"/><path d="M11 10V6a2 2 0 0 1 4 0v4"/><path d="M15 10.5V8a2 2 0 0 1 4 0v6a8 8 0 0 1-8 8h-1a8 8 0 0 1-7-4l-2.3-4a1.7 1.7 0 0 1 3-1.7L5 14V9a2 2 0 0 1 2-2"/></svg></div>
+          <h3>Manicure &amp; Pedicure</h3>
+          <p>Cuidado completo para mãos e pés com esmaltação e tratamentos especiais.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg></div>
+          <h3>Maquiagem</h3>
+          <p>Looks personalizados para eventos especiais e dia a dia com técnicas profissionais.</p>
+        </article>
+      </div>
+
+      <div class="center-action">
+        <a class="btn btn-outline" href="https://wa.me/5554999553605?text=Ol%C3%A1!%20Vi%20seu%20site%20no%20Google%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Lopes%20Barreto." target="_blank" rel="noopener noreferrer">Consultar Valores e Agendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS + SOBRE ===== -->
+  <section class="pad bg-white" id="sobre">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">Prova Social</span>
+        <h2>O Que Nossas Clientes Dizem</h2>
+        <p>Veja o que dizem as clientes que já viveram a experiência do Studio Lopes Barreto.</p>
+      </div>
+
+      <!-- ============================================================
+           DEPOIMENTOS: SUBSTITUA pelos depoimentos REAIS do Google
+           da Marciele. Não use nomes ou fotos fictícias. Use primeiro
+           nome + inicial, com autorização das clientes.
+           ============================================================ -->
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"[Substitua por um depoimento real do Google]"</p>
+          <div class="testimonial-author">
+            <div class="avatar">A.</div>
+            <div>
+              <strong>Nome da Cliente</strong>
+              <small>Serviço realizado</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"[Substitua por um depoimento real do Google]"</p>
+          <div class="testimonial-author">
+            <div class="avatar">B.</div>
+            <div>
+              <strong>Nome da Cliente</strong>
+              <small>Serviço realizado</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"[Substitua por um depoimento real do Google]"</p>
+          <div class="testimonial-author">
+            <div class="avatar">C.</div>
+            <div>
+              <strong>Nome da Cliente</strong>
+              <small>Serviço realizado</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>"[Substitua por um depoimento real do Google]"</p>
+          <div class="testimonial-author">
+            <div class="avatar">D.</div>
+            <div>
+              <strong>Nome da Cliente</strong>
+              <small>Serviço realizado</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sobre a Marciele -->
+      <div class="about-box reveal">
+        <div>
+          <span class="eyebrow">Sobre Nós</span>
+          <h2>Conheça a Especialista Marciele Lopes</h2>
           <p>
-            No <strong>Lopes Studio de Beleza</strong>, cada cliente recebe
-            atendimento personalizado em um ambiente acolhedor e moderno.
+            Com mais de uma década de experiência em estética e beleza, Marciele Lopes construiu
+            um espaço onde cada mulher é tratada como única. Sua abordagem personalizada une
+            técnicas avançadas com um atendimento humanizado.
           </p>
-          <br>
           <p>
-            O estúdio atende público feminino, masculino e infantil, oferecendo
-            praticidade para toda a família em um só lugar.
+            O Studio Lopes Barreto nasceu do sonho de oferecer tratamentos de excelência
+            em um ambiente acolhedor, onde você pode relaxar e confiar que está em mãos especializadas.
           </p>
-          <br>
-          <p>
-            Agende seu horário e venha viver uma experiência de cuidado, beleza e bem-estar.
-          </p>
+          <div class="about-tags">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+              Certificação Profissional
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+              Produtos Autorizados
+            </span>
+          </div>
         </div>
 
-        <div class="about-visual">
-          <img src="fachada.jpg.jpeg" alt="Fachada do Lopes Studio de Beleza">
+        <div class="about-photo">
+          <div class="frame">
+            <!-- TROQUE por uma foto REAL da Marciele (ex.: marciele.jpeg) -->
+            <img src="marciele.jpeg" alt="Marciele Lopes, especialista em estética do Studio Lopes Barreto em Garibaldi" loading="lazy" />
+            <div class="about-photo-caption">
+              <strong>Marciele Lopes</strong>
+              <span>Especialista em Estética</span>
+            </div>
+          </div>
+          <div class="rating-chip">
+            <span class="star">★</span>
+            <strong>5.0</strong>
+            <span style="color: var(--nude-500); font-size: 0.8rem;">Avaliação</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="diferenciais">
+  <!-- ===== DIFERENCIAIS ===== -->
+  <section class="pad bg-gradient-soft">
     <div class="container">
-      <h2>Nossos Diferenciais</h2>
-      <p class="section-subtitle">Por que escolher o Lopes Studio de Beleza?</p>
+      <div class="section-title">
+        <span class="eyebrow">Diferenciais</span>
+        <h2>Como Cuidamos de Você</h2>
+      </div>
 
-      <div class="cards">
-        <div class="card">
-          <div class="icon">👨‍👩‍👧‍👦</div>
-          <h3>Atendimento para toda a família</h3>
-          <p>Serviços para mulheres, homens e crianças.</p>
+      <div class="diff-grid">
+        <div class="diff-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5-4-9-7.5-9-11.5C3 6.5 5 4.5 7.5 4.5c1.7 0 3.3.9 4.5 2.5 1.2-1.6 2.8-2.5 4.5-2.5C19 4.5 21 6.5 21 9.5c0 4-4 7.5-9 11.5z"/></svg></div>
+          <h3>Diagnóstico Personalizado</h3>
+          <p>Cada cliente recebe uma avaliação completa para identificar as melhores soluções para seu tipo de pele, cabelo e objetivos estéticos.</p>
         </div>
 
-        <div class="card">
-          <div class="icon">⭐</div>
-          <h3>Profissionais qualificados</h3>
-          <p>Atendimento com técnica, cuidado e atenção.</p>
+        <div class="diff-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-5.4 3.2L16 19l-4-3-4 3 1.4-5.8L4 10l6.1-1.2L12 3z"/></svg></div>
+          <h3>Produtos de Excelência</h3>
+          <p>Utilizamos apenas produtos premium e técnicas certificadas, garantindo resultados duradouros e seguros para sua saúde.</p>
         </div>
 
-        <div class="card">
-          <div class="icon">📍</div>
-          <h3>Fácil localização</h3>
-          <p>Rua Buarque de Macedo, 2078, Sala 3, São Francisco, Garibaldi - RS.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">⏰</div>
-          <h3>Atendimento com hora marcada</h3>
-          <p>Mais conforto, organização e praticidade para você.</p>
+        <div class="diff-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg></div>
+          <h3>Ambiente Aconchegante</h3>
+          <p>Nosso studio foi pensado para seu bem-estar. Ambiente climatizado, música relaxante e atendimento exclusivo.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contato">
+  <!-- ===== GALERIA =====
+       TROQUE as imagens 01.jpeg a 08.jpeg por fotos REAIS do estúdio
+       e dos trabalhos da Marciele. Ajuste os textos alt e labels. -->
+  <section class="pad bg-white" id="galeria">
     <div class="container">
-      <h2>Entre em Contato</h2>
-      <p class="section-subtitle">Agende seu horário de forma rápida.</p>
+      <div class="section-title">
+        <span class="eyebrow">Nosso Trabalho</span>
+        <h2>Galeria de Resultados</h2>
+        <p>Veja alguns dos nossos trabalhos e inspire-se para sua próxima transformação.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item big reveal">
+          <img src="01.jpeg" alt="Tratamento facial no Studio Lopes Barreto em Garibaldi" loading="lazy" />
+          <span class="label">Tratamentos Faciais</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="02.jpeg" alt="Hidratação capilar realizada no Studio Lopes Barreto" loading="lazy" />
+          <span class="label">Hidratação Capilar</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="03.jpeg" alt="Maquiagem profissional no Studio Lopes Barreto" loading="lazy" />
+          <span class="label">Maquiagem</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="04.jpeg" alt="Espaço interno do Studio Lopes Barreto em Garibaldi" loading="lazy" />
+          <span class="label">Nosso Espaço</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="05.jpeg" alt="Estética facial no Studio Lopes Barreto" loading="lazy" />
+          <span class="label">Estética Facial</span>
+        </div>
+        <div class="gallery-item big reveal">
+          <img src="06.jpeg" alt="Ambiente premium do Studio Lopes Barreto em Garibaldi" loading="lazy" />
+          <span class="label">Ambiente Premium</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="07.jpeg" alt="Manicure e pedicure no Studio Lopes Barreto" loading="lazy" />
+          <span class="label">Manicure &amp; Pedicure</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="08.jpeg" alt="Design de sobrancelha no Studio Lopes Barreto" loading="lazy" />
+          <span class="label">Design de Sobrancelha</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO / LOCALIZAÇÃO ===== -->
+  <section class="pad bg-gradient-soft" id="contato">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">Localização</span>
+        <h2>Venha Nos Visitar</h2>
+      </div>
 
       <div class="contact-grid">
-        <div class="contact-box">
-          <h3>Informações</h3>
-          <p><strong>Lopes Studio de Beleza</strong></p>
-          <p>Rua Buarque de Macedo, 2078, Sala 3</p>
-          <p>Bairro São Francisco</p>
-          <p>Garibaldi - RS</p>
-          <p><strong>WhatsApp:</strong> (54) 99955-3605</p>
+        <div class="contact-info reveal">
+          <h3>Informações de Contato</h3>
 
-          <a class="btn-whats" target="_blank" href="https://wa.me/5554999553605?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20no%20Lopes%20Studio%20de%20Beleza">
-            Chamar no WhatsApp
-          </a>
+          <div class="contact-item">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <div>
+              <strong>Endereço</strong>
+              <!-- COMPLETE com o número do endereço! -->
+              <p>R. Buarque de Macedo - São Francisco<br />Garibaldi - RS, 95720-000</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div>
+              <strong>Horário de Atendimento</strong>
+              <p>Segunda a Sexta: 8h às 19h<br />Sábados: 8h às 14h</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.6a2 2 0 0 1 1.8 2.1z"/></svg></div>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>(54) 99955-3605</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14l-1.5-5.5a2 2 0 0 0-2-1.5H8.5a2 2 0 0 0-2 1.5L5 17z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M5 17v2M19 17v2"/></svg></div>
+            <div>
+              <strong>Estacionamento</strong>
+              <p>Estacionamento livre e gratuito para clientes</p>
+            </div>
+          </div>
+
+          <a class="btn btn-gold" href="https://wa.me/5554999553605?text=Ol%C3%A1!%20Vi%20seu%20site%20no%20Google%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Lopes%20Barreto." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
         </div>
 
-        <div class="contact-box">
-          <h3>Localização</h3>
-          <p>Toque no botão abaixo para abrir a localização no Google Maps.</p>
-
-          <a class="map-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rua+Buarque+de+Macedo+2078+Sala+3+Garibaldi+RS">
+        <div class="contact-photo reveal">
+          <!-- TROQUE por foto real do estúdio ou fachada -->
+          <img src="fachada.jpeg" alt="Fachada do Studio Lopes Barreto em Garibaldi" loading="lazy" />
+          <a class="maps-btn" href="https://www.google.com/maps/search/?api=1&query=Studio+Lopes+Barreto+R.+Buarque+de+Macedo+Garibaldi+RS" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
             Ver no Google Maps
           </a>
         </div>
@@ -467,11 +2135,307 @@
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
+  <section class="pad bg-white">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">Dúvidas Frequentes</span>
+        <h2>Perguntas Frequentes</h2>
+      </div>
+
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Os procedimentos doem?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>A maioria dos nossos tratamentos é indolor ou com desconforto mínimo. Utilizamos técnicas avançadas e produtos de qualidade para garantir seu conforto. Para procedimentos mais sensíveis, aplicamos anestésico tópico quando necessário.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Posso parcelar os tratamentos?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! Oferecemos condições especiais de parcelamento em até 3x no cartão sem juros. Para pacotes maiores, consulte-nos sobre condições exclusivas. Sua beleza não precisa esperar.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Como funciona o agendamento de retorno?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Após cada procedimento, orientamos sobre o período ideal para manutenção. Você pode agendar seu retorno pelo WhatsApp, telefone ou pessoalmente. Enviamos lembretes para que você não perca sua data.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Quais cuidados devo ter pós-sessão?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Fornecemos um guia personalizado para cada tratamento. Geralmente inclui evitar sol, produtos específicos e cuidados básicos. Acompanhamos você pelo WhatsApp para qualquer dúvida.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="final-cta">
+    <div class="inner">
+      <svg class="crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8l4 4 6-8 6 8 4-4v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8z"/></svg>
+      <h2>Sua Transformação Começa Aqui</h2>
+      <p>
+        Cada mulher merece se olhar no espelho e se sentir poderosa.
+        Agende sua consulta e descubra como podemos realçar sua beleza natural.
+      </p>
+      <div class="actions">
+        <a class="btn btn-cta-light" href="https://wa.me/5554999553605?text=Ol%C3%A1!%20Vi%20seu%20site%20no%20Google%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Lopes%20Barreto." target="_blank" rel="noopener noreferrer">Agendar Agora pelo WhatsApp</a>
+        <a class="btn btn-cta-ghost" href="#servicos">Ver Tratamentos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Lopes Studio de Beleza. Todos os direitos reservados.</p>
-      <p>Garibaldi - RS | WhatsApp: (54) 99955-3605</p>
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8l4 4 6-8 6 8 4-4v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8z"/></svg>
+            Studio Lopes Barreto
+          </div>
+          <p>
+            Transformando autoestima através da beleza.
+            Tratamentos exclusivos para mulheres que valorizam o cuidado consigo mesmas.
+          </p>
+        </div>
+
+        <div>
+          <h4>Links Rápidos</h4>
+          <nav class="footer-links">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4>Contato</h4>
+          <p>R. Buarque de Macedo - São Francisco</p>
+          <p>Garibaldi - RS, 95720-000</p>
+          <p>(54) 99955-3605</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Studio Lopes Barreto. Todos os direitos reservados.</p>
+        <!-- Se a Marciele tiver CNPJ, insira aqui. Se não tiver, apague a linha abaixo. -->
+        <p>CNPJ: 00.000.000/0000-00</p>
+      </div>
     </div>
   </footer>
+
+  <!-- ===== BOTÕES FLUTUANTES ===== -->
+  <a class="floating-whatsapp" href="https://wa.me/5554999553605?text=Ol%C3%A1!%20Vi%20seu%20site%20no%20Google%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Lopes%20Barreto." target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88zm8.42-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.9c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.33 11.89-11.9 0-3.18-1.24-6.16-3.47-8.4z"/></svg>
+    <span>Agendar no Whats?</span>
+  </a>
+
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+
+
+  <!-- ===== LIGHTBOX DO CARROSSEL INSTAGRAM ===== -->
+  <div class="lightbox" id="instaLightbox" aria-hidden="true">
+    <div class="lightbox-box" role="dialog" aria-modal="true" aria-label="Visualização ampliada da foto">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Fechar">×</button>
+      <button class="lightbox-prev" id="lightboxPrev" type="button" aria-label="Foto anterior">‹</button>
+      <img id="lightboxImg" src="" alt="Foto ampliada do Instagram" />
+      <button class="lightbox-next" id="lightboxNext" type="button" aria-label="Próxima foto">›</button>
+    </div>
+  </div>
+
+  <script>
+    // ===== Header com efeito de scroll + botão voltar ao topo =====
+    const header = document.getElementById('header');
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY > 50;
+      header.classList.toggle('scrolled', scrolled);
+      backToTop.classList.toggle('show', scrolled);
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== Menu mobile =====
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open);
+      menuToggle.textContent = open ? '✕' : '☰';
+    });
+
+    // Fecha o menu ao clicar em um link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    // ===== Animações de entrada (scroll reveal) =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ===== Contadores animados =====
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const end = parseInt(el.dataset.count, 10);
+        const suffix = el.dataset.suffix || '';
+        const duration = 2000;
+        let startTime = null;
+
+        const animate = (time) => {
+          if (!startTime) startTime = time;
+          const progress = Math.min((time - startTime) / duration, 1);
+          el.textContent = Math.floor(progress * end) + suffix;
+          if (progress < 1) requestAnimationFrame(animate);
+        };
+
+        requestAnimationFrame(animate);
+        counterObserver.unobserve(el);
+      });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('.num[data-count]').forEach(el => counterObserver.observe(el));
+
+
+
+    // ===== Carrossel estilo Instagram + Lightbox =====
+    const instaTrack = document.getElementById('instaTrack');
+    const instaPrev = document.getElementById('instaPrev');
+    const instaNext = document.getElementById('instaNext');
+    const instaCards = Array.from(document.querySelectorAll('.insta-card img'));
+    const lightbox = document.getElementById('instaLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    let currentInstaIndex = 0;
+
+    function scrollInsta(direction) {
+      if (!instaTrack) return;
+      const amount = Math.max(260, instaTrack.clientWidth * 0.75);
+      instaTrack.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    }
+
+    if (instaPrev && instaNext) {
+      instaPrev.addEventListener('click', () => scrollInsta(-1));
+      instaNext.addEventListener('click', () => scrollInsta(1));
+    }
+
+    function openLightbox(index) {
+      const img = instaCards[index];
+      if (!img || !img.getAttribute('src')) return;
+      currentInstaIndex = index;
+      lightboxImg.src = img.getAttribute('src');
+      lightboxImg.alt = img.alt || 'Foto ampliada do Instagram';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function moveLightbox(direction) {
+      currentInstaIndex = (currentInstaIndex + direction + instaCards.length) % instaCards.length;
+      const img = instaCards[currentInstaIndex];
+      lightboxImg.src = img.getAttribute('src');
+      lightboxImg.alt = img.alt || 'Foto ampliada do Instagram';
+    }
+
+    instaCards.forEach((img, index) => {
+      img.addEventListener('click', () => openLightbox(index));
+    });
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', () => moveLightbox(-1));
+    if (lightboxNext) lightboxNext.addEventListener('click', () => moveLightbox(1));
+    if (lightbox) {
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+    }
+
+    document.addEventListener('keydown', (event) => {
+      if (!lightbox || !lightbox.classList.contains('open')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') moveLightbox(-1);
+      if (event.key === 'ArrowRight') moveLightbox(1);
+    });
+
+    // Movimento automático suave do carrossel, sem atrapalhar o usuário
+    let instaAuto = setInterval(() => scrollInsta(1), 4200);
+    if (instaTrack) {
+      instaTrack.addEventListener('mouseenter', () => clearInterval(instaAuto));
+      instaTrack.addEventListener('mouseleave', () => {
+        instaAuto = setInterval(() => scrollInsta(1), 4200);
+      });
+    }
+
+    // ===== FAQ sanfona =====
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const btn = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Fecha os outros
+        document.querySelectorAll('.faq-item.active').forEach(other => {
+          other.classList.remove('active');
+          other.querySelector('.faq-answer').style.maxHeight = null;
+          other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
